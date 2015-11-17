@@ -5,7 +5,7 @@ import urllib
 import markovify
 from Tkinter import *
 import ttk
-
+import random
 
 #Opens the text file to be used for the data
 def text_data_file():
@@ -121,7 +121,7 @@ def printSentences(n):
         print "Please enter a positive integer"
         printSentences(n)
     for i in range(int(n)):
-            print(text_model.make_short_sentence(140))
+            print("#" + random.randrange(1432, 7999) + " " + (text_model.make_short_sentence(140)))
 
 #Decides whether to use existing text file or get new data
 def decideRoute(acccode, pgid):
